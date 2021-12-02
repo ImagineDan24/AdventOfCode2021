@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
 
 namespace AdventOfCode2021
@@ -10,8 +9,8 @@ namespace AdventOfCode2021
         public static void Main()
         {
             var fileInput = @"..\..\..\Data\day1.txt";
-            List<int> list = new List<int>();
             var lines = File.ReadAllLines(fileInput);
+            List<int> list = new List<int>();
 
             for (int i = 0; i < lines.Length; i++)
             {
