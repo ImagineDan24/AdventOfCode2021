@@ -8,7 +8,7 @@ namespace AdventOfCode2021
     {
         public static void Main()
         {
-            var fileInput = @"..\..\..\Data\test.txt";
+            var fileInput = @"..\..\..\Data\Day3.txt";
             var lines = File.ReadAllLines(fileInput);
 
             Console.WriteLine("Commencing Day 3 Part A...");

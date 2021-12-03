@@ -8,7 +8,7 @@ namespace AdventOfCode2021
     {
         public static void Main()
         {
-            var fileInput = @"..\..\..\Data\day1.txt";
+            var fileInput = @"..\..\..\Data\Day1.txt";
             var lines = File.ReadAllLines(fileInput);
             List<int> list = new List<int>();
 
