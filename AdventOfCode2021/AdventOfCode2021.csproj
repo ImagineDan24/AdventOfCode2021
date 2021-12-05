@@ -10,6 +10,7 @@
     <Compile Remove="Day\Day2.cs" />
     <Compile Remove="Day\Day3.cs" />
     <Compile Remove="Day\Day4Part1.cs" />
+    <Compile Remove="Day\Day4Part2.cs" />
   </ItemGroup>
 
 </Project>
