@@ -5,4 +5,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Day\Day1.cs" />
+    <Compile Remove="Day\Day2.cs" />
+    <Compile Remove="Day\Day3.cs" />
+    <Compile Remove="Day\Day4Part1.cs" />
+  </ItemGroup>
+
 </Project>
