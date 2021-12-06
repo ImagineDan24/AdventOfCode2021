@@ -11,7 +11,7 @@ namespace AdventOfCode2021
             var fileInput = @"..\..\..\Data\Test.txt";
             var lines = File.ReadAllLines(fileInput);
 
-            Console.WriteLine("Commencing Day 3 Part 2...");
+            Console.WriteLine("Commencing Day 5 Part 2...");
 
             List<int[]> points = new List<int[]>();
             
@@ -120,5 +120,3 @@ namespace AdventOfCode2021
         }
     }
 }
-
-//check for point 6,4

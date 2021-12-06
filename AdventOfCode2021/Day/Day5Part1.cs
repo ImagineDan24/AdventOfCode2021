@@ -16,7 +16,7 @@ namespace AdventOfCode2021
             //add a counter on each point and if it comes up multiple times then you increment the counter
             //search for all points that have their counter >= 2
 
-            Console.WriteLine("Commencing Day 3 Part A...");
+            Console.WriteLine("Commencing Day 5 Part A...");
 
             List<int[]> points = new List<int[]>();
             
