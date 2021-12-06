@@ -8,7 +8,7 @@ namespace AdventOfCode2021
     {
         public static void Main()
         {
-            var fileInput = @"..\..\..\Data\Test.txt";
+            var fileInput = @"..\..\..\Data\Day5.txt";
             var lines = File.ReadAllLines(fileInput);
 
             Console.WriteLine("Commencing Day 5 Part 2...");
@@ -73,22 +73,75 @@ namespace AdventOfCode2021
                 else if (((point2[1] - point1[1]) / (point2[0] - point1[0])) == 1 || ((point2[1] - point1[1]) / (point2[0] - point1[0])) == -1) //diagonal
                 {
                     var slope = (point2[1] - point1[1]) / (point2[0] - point1[0]);
-                    
+
                     /*
-                     * (6,4) -> (2,0)   (2,0) (3,1) (4,2) (5,3) (6,4)
-                     * (2,0) -> (6,4)
+                     * Diagonal Cases
                      * 
-                     * (9,7) -> (7,9)   (7,9) (8,8) (9,7)
+                     * bottom left to top right (slope == 1)
+                     * (2,0) -> (6,4)
+                     *                                          (2,0) (3,1) (4,2) (5,3) (6,4)
+                     * top right to bottom left (slope == 1)
+                     * (6,4) -> (2,0)
+                     * 
+                     * bottom right to top left (slope == -1)
+                     * (9,7) -> (7,9)
+                     *                                          (7,9) (8,8) (9,7)
+                     * top left to bottom right (slope == -1)
                      * (7,9) -> (9,7)
                      */
-
                     if (slope == 1)
                     {
-                        
+                        if (point1[0] > point2[0])
+                        {
+                            int x = point2[0];
+                            int y = point2[1];
+                            while (x <= point1[0])
+                            {
+                                var newPoint = new int[] { x , y , 1 };
+                                points = ListContainsAndIncrement(newPoint, points);
+                                x++;
+                                y++;
+                            }
+                        }
+                        else
+                        {
+                            int x = point1[0];
+                            int y = point1[1];
+                            while (x <= point2[0])
+                            {
+                                var newPoint = new int[] { x, y, 1 };
+                                points = ListContainsAndIncrement(newPoint, points);
+                                x++;
+                                y++;
+                            }
+                        }
                     }
                     else
                     {
-                        
+                        if (point1[0] > point2[0])
+                        {
+                            int x = point2[0];
+                            int y = point2[1];
+                            while (x <= point1[0])
+                            {
+                                var newPoint = new int[] { x, y, 1 };
+                                points = ListContainsAndIncrement(newPoint, points);
+                                x++;
+                                y--;
+                            }
+                        }
+                        else
+                        {
+                            int x = point1[0];
+                            int y = point1[1];
+                            while (x <= point2[0])
+                            {
+                                var newPoint = new int[] { x, y, 1 };
+                                points = ListContainsAndIncrement(newPoint, points);
+                                x++;
+                                y--;
+                            }
+                        }
                     }
                 }
             }
