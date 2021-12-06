@@ -73,86 +73,22 @@ namespace AdventOfCode2021
                 else if (((point2[1] - point1[1]) / (point2[0] - point1[0])) == 1 || ((point2[1] - point1[1]) / (point2[0] - point1[0])) == -1) //diagonal
                 {
                     var slope = (point2[1] - point1[1]) / (point2[0] - point1[0]);
+                    
+                    /*
+                     * (6,4) -> (2,0)   (2,0) (3,1) (4,2) (5,3) (6,4)
+                     * (2,0) -> (6,4)
+                     * 
+                     * (9,7) -> (7,9)   (7,9) (8,8) (9,7)
+                     * (7,9) -> (9,7)
+                     */
 
                     if (slope == 1)
                     {
-                        int count = 0;
-                        //6,4 -> 2,0
-                        if (point1[0] > point2[0])
-                        {
-                            int[] x = new int[Math.Abs(point1[0] - point2[0]) + 1];
-                            int[] y = new int[x.Length];
-                            for (int j = point2[0]; j <= point1[0]; j++)
-                            {
-                                x[count] = j;
-                                count++;
-                            }
-                            count = 0;
-                            for(int j = point2[1]; j <= point1[1]; j++)
-                            {
-                                y[count] = j;
-                                count++;
-                            }
-                            for (int j = 0; j < x.Length; j++)
-                            {
-                                var newPoint = new int[] { x[j], y[j] , 1 };
-                                points = ListContainsAndIncrement(newPoint, points);
-                            }
-                        }
-                        else
-                        {
-                            //2,0 -> 6,4
-                            int[] x = new int[Math.Abs(point1[0] - point2[0]) + 1];
-                            int[] y = new int[x.Length];
-                            for (int j = point1[0]; j <= point2[0]; j++)
-                            {
-                                x[count] = j;
-                                count++;
-                            }
-                            count = 0;
-                            for (int j = point1[1]; j <= point2[1]; j++)
-                            {
-                                y[count] = j;
-                                count++;
-                            }
-                            for (int j = 0; j < x.Length; j++)
-                            {
-                                var newPoint = new int[] { x[j], y[j], 1 };
-                                points = ListContainsAndIncrement(newPoint, points);
-                            }
-                        }
+                        
                     }
                     else
                     {
-                        int[] x = new int[Math.Abs(point1[0] - point2[0]) + 1];
-                        int count = 0;
-                        if (point1[0] > point2[0])
-                        {
-                            for (int j = point2[0]; j <= point1[0]; j++)
-                            {
-                                x[count] = j;
-                                count++;
-                            }
-                        }
-                        else
-                        {
-                            for (int j = point1[0]; j <= point2[0]; j++)
-                            {
-                                x[count] = j;
-                                count++;
-                            }
-                        }
-
-                        int left = 0;
-                        int right = x.Length - 1;
-
-                        while (left <= x.Length - 1)
-                        {
-                            var newPoint = new int[] { x[left], x[right], 1 };
-                            points = ListContainsAndIncrement(newPoint, points);
-                            left++;
-                            right--;
-                        }
+                        
                     }
                 }
             }
@@ -185,3 +121,4 @@ namespace AdventOfCode2021
     }
 }
 
+//check for point 6,4
