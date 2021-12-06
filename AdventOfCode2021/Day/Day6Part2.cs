@@ -11,9 +11,11 @@ namespace AdventOfCode2021
             var fileInput = @"..\..\..\Data\Test.txt";
             var lines = File.ReadAllLines(fileInput);
 
-            Console.WriteLine("Commencing Day 6 Part 2...");
+            var fishList = lines[0].Split(',').Select(int.Parse).ToList();
 
-            Console.WriteLine("Answer: ");
+            //I can't do it ;(
+
+            Console.WriteLine("Answer: " + fishList.Length);
         }
     }
 }

@@ -12,7 +12,7 @@
     <Compile Remove="Day\Day4Part1.cs" />
     <Compile Remove="Day\Day4Part2.cs" />
     <Compile Remove="Day\Day5Part1.cs" />
-    <Compile Remove="Day\Day6Part1.cs" />
+    <Compile Remove="Day\Day5Part2.cs" />
     <Compile Remove="Day\Day6Part2.cs" />
   </ItemGroup>
 
