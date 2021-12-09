@@ -12,6 +12,8 @@ namespace AdventOfCode2021
             var fileInput = @"..\..\..\Data\Test.txt";
             var lines = File.ReadAllLines(fileInput);
 
+            //idk
+
             Console.WriteLine("Answer: ");
         }
     }
